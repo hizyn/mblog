@@ -1,0 +1,14 @@
+{% extends 'zhidaow/base.html' %}
+
+{% block title %}About {{ column.name}}'s articles - 张亚楠的个人博客{% endblock %}
+{% block description %}<meta name="description" content="张亚楠的个人博客，专门记录个人杂事。" />{% endblock %}
+
+{% block content %}
+
+
+        <div class="container" id="posts">
+	<div><h1>Articles about {{ column.name }} </h1></div>
+        {% include 'zhidaow/posts_list.html' %}
+        </div>
+
+{% endblock %}

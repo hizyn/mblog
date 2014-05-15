@@ -1,0 +1,14 @@
+{% extends 'zhidaow/base.html' %}
+
+{% block title %}张亚楠的个人博客 - 山不在高，有仙则灵{% endblock %}
+{% block description %}<meta name="description" content="张亚楠的个人博客，专门记录个人杂事。" />{% endblock %}
+
+{% block content %}
+
+
+        <div class="container" id="posts">
+	<div><h1>Articles about {{ tag.name}} </h1></div>
+        {% include 'zhidaow/posts_list.html' %}
+        </div>
+
+{% endblock %}

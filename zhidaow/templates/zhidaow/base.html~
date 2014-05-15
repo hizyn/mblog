@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="cn-zh">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>{% block title %}张亚楠的个人博客{% endblock %}</title>
+	{% block description %}{% endblock %}
+    <link href="http://www.zhidaow.com/service/static/css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!--[if IE 7]>
+    <link href="http://www.zhidaow.com/css/font-awesome/css/font-awesome-ie7.min.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link rel="stylesheet" href="http://www.zhidaow.com/service/static/css/default-template-v3.css?version={{ resource_version }}">
+    <link rel="stylesheet" href="http://www.zhidaow.com/css/basic.css?version={{ resource_version }}">
+
+    {% block head %}
+    {% endblock %}
+
+</head>
+<body>
+
+
+<div id="header" style="background: #403D39">
+
+    <ul id="nav">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
+            <a href="#">Archive</a>
+        </li>
+        <li>
+            <a href="#">Categories</a>
+        </li>
+        <li>
+            <a href="#">Tags</a>
+        </li>
+        <li>
+            <a href="#">Photo</a>
+        </li>
+        <li>
+            <a href="#">Links</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+    </ul>
+</div>
+
+{% block content %}
+{% endblock %}
+
+
+
+
+<div id="footer">
+    <div class="powered_by">
+        <a target='_blank' href="http://www.farbox.com">Proudly Powered By FarBox.com!</a>
+        <span>©2012-2015 Z.R.E.Y Inc.</span>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+
+

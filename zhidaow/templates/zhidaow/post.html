@@ -1,0 +1,45 @@
+{% extends 'zhidaow/base.html' %}
+{% load markdown_deux_tags %}
+{% block title %}{{ post.title }} - 张亚楠 ' BLOG{% endblock %}
+
+
+{% block content %}
+<div class="container" id="posts">
+    <div class="post detail_post">
+        <h1 class="title"><a href="{% url 'zhidaow:post' post.id %}">{{ post.title }}</a></h1>
+
+        <div class="post_body">
+            {{ post.content|markdown:"STYLE" }}
+        </div>
+
+        <div class="info">
+			<span class="author" style="float:right;">
+				作者：<a href="{% url 'zhidaow:author' post.author.id%}">{{ post.author.name }}</a>
+			</span>
+		    <span class="date" title="发布日期">
+                <i class="icon-clock"></i>
+                {{ post.date|date:"Y-n-j G:i" }}
+            </span>
+		    <span class="visitors" title="访问量">
+                <i class="icon-user"></i>
+                {{ post.visits}}
+            </span>
+			<span class="tags">
+				<i class="icon-tags"></i>
+				<a href="{% url 'zhidaow:column' post.column.id%}">{{ post.column.name }}</a>
+			</span>
+
+            {% if post.tag %}
+	        <span class="tags">
+	            <i class="icon-tags"></i>
+				{% for tag in post.tag.all %}
+				<a href="{% url 'zhidaow:tag' tag.id %}">{{tag.name}}</a>
+				{% endfor %}
+            </span>
+            {% endif %}
+	    </div>
+    </div>
+
+
+</div>
+{% endblock %}
